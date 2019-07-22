@@ -1,0 +1,152 @@
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: .5rem 1.5em;
+    border-radius: 10rem;
+    font-size: 2.5rem;
+    color: $font-color-light-dark;
+    transition: all .2s;
+    position: relative;
+
+    //<button>
+    border: none;
+    cursor: pointer;
+    }
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color-white;
+    border-radius: 10rem;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.btn:hover::after {
+    transform: scale(1.7, 1.8);
+    opacity: 0;
+}
+
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .5rem 2rem rgba($color: $color-dark, $alpha: .3);
+}
+.btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 2rem rgba($color: $color-dark, $alpha: .15);
+
+}
+
+.btn--green {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: .5rem 1.5em;
+    border-radius: 10rem;
+    font-size: 2rem;
+    color: $font-color-light-dark;
+    transition: all .2s;
+    position: relative;
+
+    //<button>
+    border: none;
+    cursor: pointer;
+    background-color: $color-primary;
+
+&:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .5rem 2rem rgba($color: $color-dark, $alpha: .3);
+}
+&:active {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 2rem rgba($color: $color-dark, $alpha: .15);
+
+    
+}
+}
+
+
+
+
+
+
+.btn--white {
+    background-color: $color-white;
+    color: $color-dark;
+}
+
+.btn--animated {
+    animation: moveInBottom .4s ease-in-out .7s;
+    animation-fill-mode: backwards;
+    
+}
+
+
+.btn-text {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color-primary;
+        font-size: 2rem;
+        display: inline-block;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+      
+        transition: all .2s;
+
+    }
+
+    &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-dark, .15);
+            transform: translateY(-2px);
+            border-radius: 3px;
+    }
+
+    &:active {
+        transform: translateY(-1px);    
+        box-shadow: 0 .5rem 1rem rgba($color-dark, .15);
+        border-radius: 3px;
+    }
+}
+
+.cards__cta-btn {
+    &-book {
+        &,
+        &:link,
+        &:visited{
+        color: $color-secondary-dark;
+        padding: .5rem 1.5rem;
+        display: inline-block;
+        font-size: 2.5rem;
+        text-decoration: none;
+        background-color: white;
+        border-radius: 2rem;
+        transition: all .3s;
+        box-shadow: 0 1rem 2rem rgba($color-dark, .2);
+    }
+    }
+    &:hover &-book {
+        color: white;
+        border: 1px solid white;
+        background-color: $color-secondary-dark;
+        transform: scale(1.1);
+    }
+    &-book:active {
+        box-shadow: 0 1rem 1.5rem rgba($color-dark, .1); 
+    }
+}

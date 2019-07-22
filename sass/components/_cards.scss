@@ -1,0 +1,318 @@
+
+.cards {
+    width: 85%;
+    perspective: 150rem;
+    position: relative;
+    margin: 0 auto;
+
+  
+    &__side {
+       
+        width: 100%;
+        height: 50rem;
+       
+        transition: all 1s ease;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: .3rem;
+        overflow: hidden;
+        box-shadow: 0 1rem 2rem rgba($color: $color-dark, $alpha: .2);
+
+        // @include respond(tab-port){
+        //     position: relative;
+        //     height: 45rem;
+        // }
+       
+
+        &-front {
+
+          
+        }
+
+        &-back {
+            transform: rotateY(180deg);
+            position: relative;
+
+
+            // @include respond(tab-port){
+            //     transform: rotateY(0deg);
+            //     position: relative;
+            //     height: 20rem;
+            //     margin-top: -5rem;
+            //    border-top-right-radius: 0;
+            //    border-top-left-radius: 0;
+            // }
+           
+
+            &-1{
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            //clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+            }
+    
+        }
+
+    }
+    &:hover &__side-front {
+        transform: rotateY(-180deg);
+
+        // @include respond(tab-port){
+        //     transform: rotateY(0deg);
+         
+        // }
+    }
+
+    &:hover &__side-back {
+        transform: rotateY(0deg);
+
+        // @include respond(tab-port){
+        //     transform: rotateY(0deg);
+        // }
+    }
+
+
+    &__picture {
+        width: 100%;
+        height: 40%;
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+        background-blend-mode: screen;
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      
+    }
+
+    &__heading {
+     
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        top: 3rem;
+        right: .5rem;
+        text-align: right;
+        color: white;
+       
+
+    }
+
+    &__heading-span {
+        padding: 1rem ;
+        border-radius: 3px;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+    &-1 {
+        background-color: rgba($color-secondary-dark, .8);
+    }
+}
+
+    &__details {
+        text-align: center;
+        color: #777;
+        font-size: $default-font-size;
+        margin-top: -.48rem;
+        text-transform: uppercase;
+      
+      ul {
+
+      }
+
+      li {
+          list-style: none;
+          padding: 1rem;
+          
+      }
+      li:not(:last-child){
+        border-bottom: 1px solid $color-white;
+      }
+    }
+
+
+    .cards__cta{
+       position: absolute;
+       top: 47%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       text-align: center;
+       width: 80%;
+
+         
+    &-only {
+      font-size: 4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 1rem;
+
+    //   @include respond(tab-port){
+    //     font-size: 2rem;
+    //     margin-bottom: .1rem;
+    //   }
+    }
+    &-money {
+        font-size: 5rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+        color: white;
+
+        // @include respond(tab-port){
+        //     font-size: 3rem;
+        //     margin-bottom: .2rem;
+        //   }
+    }
+    &-btn {
+        position: relative;
+        padding-top: 2.5rem;
+        // @include respond(tab-port){
+        //   padding-top: .1rem;
+        //   }
+       
+    }
+}
+
+
+}
+
+
+
+//@include respond(tab-port){
+    @media only screen and (max-width: 56.25rem),
+    only screen and (hover:none){
+         
+    .cards {
+        height: auto;
+        margin: 0 auto;
+        border-radius: 3px;
+        background-color: white;
+        box-shadow: 0 1rem 2rem rgba($color: $color-dark, $alpha: .2);
+      
+        &__side {
+            width: 100%;
+            height: auto;
+            position: relative;
+           
+            box-shadow: none;
+
+            &-front {
+                height: 40rem;
+            }
+    
+            &-back {
+                transform: rotate(0deg);
+                margin-top: -2.5rem;
+                
+                &-1{
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+                clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+                }
+        
+            }
+    
+        }
+        &:hover &__side-front {
+            transform: rotateY(0deg);
+        }
+      
+    
+        .cards__cta{
+           position: relative;
+           top: 0%;
+           left: 0%;
+           transform: translate(0);
+           text-align: center;
+           width: 100%;
+           padding: 3.5rem;
+             
+        &-only {
+          margin-bottom: .5rem;
+          font-size: 2.5rem;
+        }
+        &-money {
+            font-size: 4rem; 
+            margin-bottom: .5rem;
+        }
+        &-btn {
+            position: relative;
+            //padding-top: -1rem;
+        }
+    }
+    
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .cards {
+   
+//     perspective: 150rem;
+//     -moz-perspective: 150rem;
+//     position: relative;
+//     height: 30rem;
+    
+//     &__side {
+        
+//         height: 30rem;
+//         color: white;
+//         width: 100%;
+//         font-size: 2rem;
+//         transition: all 1s ease;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         backface-visibility: hidden;
+//         border-radius: .3rem;
+//         box-shadow: 0 1rem 2rem rgba($color-dark, .15);
+
+//         &-front {
+//             background-color: $color-white;
+//         }
+    
+//         &-back {
+          
+//             transform: rotateY(180deg);
+
+//             &-1 {
+//                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+//             }
+//         }
+//     }
+
+   
+
+//     &:hover &__side-front{
+//         transform: rotateY(180deg);
+//     }
+
+//     &:hover &__side-back{
+//         transform: rotateY(0deg);
+//     }
+
+    
+// }

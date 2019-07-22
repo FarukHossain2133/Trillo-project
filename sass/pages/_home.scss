@@ -1,0 +1,78 @@
+
+.section-about {
+    background-color: $color-gray-light;
+    padding: 20rem 0;
+    margin-top: -28.5vh;
+
+    @include respond(tab-port){
+      
+    }
+}    
+
+.section-features {
+    padding: 15rem 7rem;
+    background-image: linear-gradient(to right bottom, rgba($color-primary, .8), rgba($color-secondary, .8)), url("../img/satellite.jpg");
+    background-size: cover;
+    margin-top: -10rem;
+
+    @include respond(tab-port){
+       
+        padding: 10rem 0;
+    }
+    
+    
+    transform: skewY(-7deg);
+    & > * {
+          transform: skewY(7deg);
+    }
+}
+
+.section-tours {
+    padding: 20rem 0;
+    margin-top: -8rem;
+    background-color: $color-gray-light;
+
+    @include respond(tab-port){
+       padding: 15rem 0 10rem 0;
+    }
+   
+}
+
+.section-stories {
+    padding: 15rem 0;
+    position: relative;
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+     }
+}
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 1), rgba($color-secondary, 1));
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+     }
+}
+
+.section-footer {
+    padding: 10rem 0;
+    background-color: $color-gray-dark;
+
+ @include respond(phone){
+     padding: 5rem;
+ }
+}
+
+// .section-popup {
+//     background-color: rgba($color-gray-dark, .9);
+//     width: 100%;
+//     height: auto;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     display: none;
+//     z-index: 1500;
+//     padding: 9rem 0;
+// }

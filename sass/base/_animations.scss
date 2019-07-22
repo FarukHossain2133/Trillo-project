@@ -1,0 +1,70 @@
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem) scale(.5);
+    }
+    70% {
+        opacity: .5;
+        transform: translateX(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0rem) scale(1);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem) scale(1.5);
+    }
+    70% {
+        opacity: .5;
+        transform: translateX(-3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0rem) scale(1);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes plane {
+    0% {
+        opacity: 0;
+        background-image: url(../img/AS.png);
+        transform: translateY(4rem);
+            }
+        
+            100% {
+                opacity: 1;
+                background-image: url(../img/AS.png);
+                transform: translateY(0rem);
+            }
+        }
+
+
+       @keyframes popup {
+           0% {
+               color: red;
+           }
+           100% {
+            color: darkred;
+        }
+       }
+      

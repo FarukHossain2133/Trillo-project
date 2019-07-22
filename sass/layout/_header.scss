@@ -1,0 +1,71 @@
+.header {
+    width: 100%;
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary, .8), rgba($color-secondary, .8)), url(../img/hero-small.jpg);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+    background-size: cover;
+    background-position: right;
+    position: relative;
+    transition: all .3s;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+        height: 95vh;
+    }
+
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), 
+        only screen and(min-width: 125em) {
+             background-image: linear-gradient(to right bottom, rgba($color-gray-dark, .8), rgba($color-gray-dark, .8)), url(../img/hero.jpg);
+    }
+
+
+
+    @include respond(tab-port){
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        margin-bottom: 5rem;
+    }
+ 
+
+
+    &__body {
+     
+    }
+    &__logo {
+       display: inline-block;
+    }
+
+    &__logo-img {
+        width: 6rem;
+        position: absolute;
+        display :inline-block;
+        border-radius: 50%;
+        top: 2rem;
+        left: 2rem;
+        transition: all .2s;
+        backface-visibility: hidden;
+        
+
+        &:hover {
+            transform: scale(1.2) rotate(-6deg); 
+           
+        }
+    }
+    &__heading{
+        @include absCenter;
+            text-align: center;
+            &--primary {
+                animation: moveInLeft 1s ease-out;
+                backface-visibility: hidden;
+            }
+            &--secondary {
+                animation: moveInRight 1s ease-out;
+                backface-visibility: hidden;
+               
+            }
+    }
+
+}
